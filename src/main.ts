@@ -6,6 +6,8 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  console.log(process.env.JWT_SECRET)
+
   const config = new DocumentBuilder()
     .setTitle('Users example')
     .setDescription('The users API description')
